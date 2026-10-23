@@ -6472,3 +6472,9 @@ body .site-footer a:hover { color: var(--brand-lime); }
 .home-page .safra-home-link:hover { background: var(--brand-blue); color: #fff; }
 .home-page .edital-home-link { background: #ffffff0d; color: #fff; }
 .home-page .edital-home-link:hover { background: #ffffff1c; color: #fff; }
+
+@media print {
+  .floating-whatsapp {
+    display: none !important;
+  }
+}
