@@ -38,3 +38,9 @@ scripts/setup-prime-db.js
 /veiculos/
 /public/agrosuri.png
 /public/sobrenonovo.png
+
+# Materiais pessoais e resultados locais
+/*.mov
+/funcionarios/
+/output/
+/tmp/

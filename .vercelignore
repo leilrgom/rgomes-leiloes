@@ -19,3 +19,14 @@ docsigilo.txt
 /*.jpg
 /*.jpeg
 /*.png
+/*.mov
+/*.ogg
+/*.mp3
+/*.PNG
+funcionarios/
+output/
+tmp/
+.git/
+.agents/
+.codex/
+.aws/
