@@ -152,13 +152,15 @@ export const ensureAdminSchema = async () => {
 };
 
 export const ensureDefaultAdminUser = async () => {
-  if (!DEFAULT_ADMIN_PASSWORD) {
-    throw new Error("ADMIN_PASSWORD não configurada.");
-  }
-
   await ensureAdminSchema();
 
   const admin = await findUserByEmailOrCpf(DEFAULT_ADMIN_EMAIL, "");
+  if (!DEFAULT_ADMIN_PASSWORD) {
+    if (admin?.role === "admin") {
+      return admin;
+    }
+    throw new Error("ADMIN_PASSWORD não configurada.");
+  }
   const passwordHash = await hashPassword(DEFAULT_ADMIN_PASSWORD);
 
   if (!admin) {
